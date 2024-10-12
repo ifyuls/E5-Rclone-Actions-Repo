@@ -3,7 +3,7 @@ name: E5-Rclone-Actions-Repo
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 22 1/2 * *
+    - cron: 0 23 1/2 * *
 
 jobs:
   run-it:
@@ -37,7 +37,7 @@ jobs:
           done
           }
           # 随机延迟0~30分钟后再进行操作,可自行设置时间
-          delay 3
+          delay 30
 
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
