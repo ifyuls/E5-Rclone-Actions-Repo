@@ -50,7 +50,7 @@ jobs:
           rclone move lsf.log e5-api:/E5-Rclone-Actions-Repo/
           rclone delete e5-api:/E5-Rclone-Actions-Repo/lsf.log
           rclone rmdir e5-api:/E5-Rclone-Actions-Repo/
-          rclone purge e5-api:/程序自动创建的文件夹/
+          
       - name: Zip config #打包配置文件
         run: zip -P ${{ secrets.PASSWD }} rclone.zip -j ~/.config/rclone/rclone.conf
 
